@@ -36,10 +36,13 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- Preconnect for performance -->
+    <!-- Fonts: Playfair Display (başlıklar) + General Sans via fontsource CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 
     <link rel="stylesheet" href="style.css">
 
@@ -188,7 +191,7 @@
 </head>
 <body>
 
-    <!-- Skip Navigation (Erişilebilirlik) -->
+    <!-- Skip Navigation -->
     <a href="#ana-icerik" class="skip-link">Ana içeriğe atla</a>
 
     <!-- Navbar -->
@@ -230,7 +233,7 @@
     <!-- Ana İçerik -->
     <main id="ana-icerik">
 
-        <!-- Featured Works / Projeler -->
+        <!-- Projeler -->
         <section class="section" id="projeler" aria-labelledby="projeler-baslik">
             <div class="section-container">
                 <span class="section-label">Projeler</span>
@@ -280,28 +283,34 @@
             </div>
         </section>
 
-        <!-- Services / Hizmetler -->
+        <!-- Hizmetler -->
         <section class="section" id="hizmetler" aria-labelledby="hizmetler-baslik">
             <div class="section-container">
                 <span class="section-label">Hizmetler</span>
                 <h2 class="section-title" id="hizmetler-baslik">Markanız için kapsamlı tasarım çözümleri</h2>
                 <div class="services-list">
                     <article class="service-card service-cyan" data-animate>
-                        <div class="service-icon" aria-hidden="true">🎨</div>
+                        <div class="service-icon" aria-hidden="true">
+                            <i data-lucide="palette"></i>
+                        </div>
                         <div class="service-content">
                             <h3>Marka &amp; Kurumsal Kimlik</h3>
                             <p>Logo, renk paleti, tipografi ve kurumsal kimlik kılavuzları ile markanızı güçlendiriyoruz.</p>
                         </div>
                     </article>
                     <article class="service-card service-dark" data-animate>
-                        <div class="service-icon" aria-hidden="true">💻</div>
+                        <div class="service-icon" aria-hidden="true">
+                            <i data-lucide="monitor"></i>
+                        </div>
                         <div class="service-content">
                             <h3>Web Tasarım</h3>
                             <p>Modern ve kullanıcı dostu web siteleri ile dijital varlığınızı güçlendiriyoruz.</p>
                         </div>
                     </article>
                     <article class="service-card service-yellow" data-animate>
-                        <div class="service-icon" aria-hidden="true">📢</div>
+                        <div class="service-icon" aria-hidden="true">
+                            <i data-lucide="megaphone"></i>
+                        </div>
                         <div class="service-content">
                             <h3>Dijital Pazarlama</h3>
                             <p>Sosyal medya, SEO ve dijital reklam stratejileri ile markanızı büyütüyoruz.</p>
@@ -311,7 +320,7 @@
             </div>
         </section>
 
-        <!-- Experience / Deneyim -->
+        <!-- Deneyim -->
         <section class="section" id="hakkinda" aria-labelledby="hakkinda-baslik">
             <div class="section-container">
                 <span class="section-label">Deneyim</span>
@@ -349,7 +358,7 @@
             </div>
         </section>
 
-        <!-- FAQ / Sıkça Sorulan Sorular -->
+        <!-- FAQ -->
         <section class="section" id="sss" aria-labelledby="sss-baslik">
             <div class="section-container">
                 <span class="section-label">Sorular</span>
@@ -358,7 +367,9 @@
                     <div class="faq-item" data-animate>
                         <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
                             <span>Bir projenin tamamlanma süresi ne kadar?</span>
-                            <span class="faq-toggle" aria-hidden="true">+</span>
+                            <span class="faq-toggle" aria-hidden="true">
+                                <i data-lucide="plus"></i>
+                            </span>
                         </button>
                         <div class="faq-answer" id="faq-1" role="region" hidden>
                             <p>Proje kapsamına bağlı olarak genellikle 2-8 hafta arasında değişmektedir. Detaylı bir zaman çizelgesi proje başlangıcında paylaşılır.</p>
@@ -367,7 +378,9 @@
                     <div class="faq-item" data-animate>
                         <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
                             <span>Fiyatlar nasıl belirleniyor?</span>
-                            <span class="faq-toggle" aria-hidden="true">+</span>
+                            <span class="faq-toggle" aria-hidden="true">
+                                <i data-lucide="plus"></i>
+                            </span>
                         </button>
                         <div class="faq-answer" id="faq-2" role="region" hidden>
                             <p>Fiyatlandırma proje kapsamı, karmaşıklığı ve süresine göre belirlenir. Ücretsiz danışmanlık görüşmesi sonrası detaylı teklif sunuyoruz.</p>
@@ -376,7 +389,9 @@
                     <div class="faq-item" data-animate>
                         <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
                             <span>Uzaktan çalışma imkanınız var mı?</span>
-                            <span class="faq-toggle" aria-hidden="true">+</span>
+                            <span class="faq-toggle" aria-hidden="true">
+                                <i data-lucide="plus"></i>
+                            </span>
                         </button>
                         <div class="faq-answer" id="faq-3" role="region" hidden>
                             <p>Evet, tamamen uzaktan çalışma modelimiz mevcuttur. Dünya genelindeki müşterilerimizle başarıyla iş birliği yapıyoruz.</p>
@@ -385,7 +400,9 @@
                     <div class="faq-item" data-animate>
                         <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
                             <span>Aynı anda birden fazla proje alıyor musunuz?</span>
-                            <span class="faq-toggle" aria-hidden="true">+</span>
+                            <span class="faq-toggle" aria-hidden="true">
+                                <i data-lucide="plus"></i>
+                            </span>
                         </button>
                         <div class="faq-answer" id="faq-4" role="region" hidden>
                             <p>Her projeye gereken özeni gösterebilmek için sınırlı sayıda proje kabul ediyoruz. Mevcut durumumuz hakkında bizimle iletişime geçin.</p>
@@ -394,7 +411,9 @@
                     <div class="faq-item" data-animate>
                         <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
                             <span>Tasarım sürecine nasıl dahil olabilirim?</span>
-                            <span class="faq-toggle" aria-hidden="true">+</span>
+                            <span class="faq-toggle" aria-hidden="true">
+                                <i data-lucide="plus"></i>
+                            </span>
                         </button>
                         <div class="faq-answer" id="faq-5" role="region" hidden>
                             <p>Her aşamada geri bildirimlerinizi alıyoruz. Haftalık toplantılar ve sürekli iletişim ile sürece aktif olarak dahil olabilirsiniz.</p>

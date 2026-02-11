@@ -1,3 +1,10 @@
+// ===== Lucide Icons Init =====
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+});
+
 // ===== Scroll Animations =====
 const observerOptions = {
     threshold: 0.15,

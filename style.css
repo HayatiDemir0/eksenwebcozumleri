@@ -20,6 +20,10 @@
     --radius: 12px;
     --radius-sm: 8px;
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Font ailesi */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 html {
@@ -27,11 +31,13 @@ html {
 }
 
 body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-body);
     background: var(--light);
     color: var(--dark);
     line-height: 1.6;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -45,7 +51,7 @@ img {
     height: auto;
 }
 
-/* ===== SKIP LINK (Erişilebilirlik) ===== */
+/* ===== SKIP LINK ===== */
 .skip-link {
     position: absolute;
     top: -100px;
@@ -101,6 +107,7 @@ img {
     font-weight: 500;
     color: var(--gray);
     transition: color var(--transition);
+    letter-spacing: -0.01em;
 }
 
 .nav-links a:hover,
@@ -116,6 +123,7 @@ img {
     font-size: 0.85rem;
     font-weight: 600;
     transition: all var(--transition);
+    letter-spacing: -0.01em;
 }
 
 .nav-cta:hover,
@@ -157,15 +165,16 @@ img {
     font-size: 0.9rem;
     color: var(--gray);
     margin-bottom: 12px;
+    letter-spacing: -0.01em;
 }
 
 .hero-title {
-    font-family: 'Instrument Serif', serif;
+    font-family: var(--font-heading);
     font-size: clamp(1.8rem, 4vw, 2.6rem);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.3;
     margin-bottom: 16px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
@@ -197,6 +206,7 @@ img {
     font-weight: 600;
     transition: transform var(--transition);
     cursor: default;
+    letter-spacing: -0.01em;
 }
 
 .tag:hover {
@@ -221,21 +231,21 @@ img {
 }
 
 .section-label {
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.72rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     color: var(--gray);
     display: block;
     margin-bottom: 8px;
 }
 
 .section-title {
-    font-family: 'Instrument Serif', serif;
+    font-family: var(--font-heading);
     font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 32px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 /* ===== PROJECTS ===== */
@@ -296,6 +306,22 @@ img {
     transform: translateY(0);
 }
 
+.project-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: var(--radius);
+}
+
+.project-overlay-cta {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    opacity: 0.85;
+    letter-spacing: 0.02em;
+}
+
 /* ===== SERVICES ===== */
 .services-list {
     display: flex;
@@ -330,7 +356,6 @@ img {
 .service-yellow { background: var(--yellow); }
 
 .service-icon {
-    font-size: 1.6rem;
     flex-shrink: 0;
     width: 44px;
     height: 44px;
@@ -341,10 +366,26 @@ img {
     border-radius: 10px;
 }
 
+.service-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 1.8;
+}
+
+.service-dark .service-icon {
+    background: rgba(255,255,255,0.12);
+}
+
+.service-dark .service-icon svg {
+    color: #fff;
+}
+
 .service-content h3 {
+    font-family: var(--font-body);
     font-size: 0.95rem;
     font-weight: 700;
     margin-bottom: 4px;
+    letter-spacing: -0.01em;
 }
 
 .service-content p {
@@ -385,8 +426,10 @@ img {
 }
 
 .exp-header h3 {
+    font-family: var(--font-body);
     font-size: 0.95rem;
     font-weight: 700;
+    letter-spacing: -0.01em;
 }
 
 .exp-company {
@@ -410,7 +453,8 @@ img {
     cursor: pointer;
     transition: all var(--transition);
     border: none;
-    font-family: inherit;
+    font-family: var(--font-body);
+    letter-spacing: -0.01em;
 }
 
 .btn:hover,
@@ -460,9 +504,10 @@ img {
     width: 100%;
     background: none;
     border: none;
-    font-family: inherit;
+    font-family: var(--font-body);
     color: inherit;
     text-align: left;
+    letter-spacing: -0.01em;
 }
 
 .faq-question:hover,
@@ -476,10 +521,18 @@ img {
 }
 
 .faq-toggle {
-    font-size: 1.2rem;
-    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: transform var(--transition);
     color: var(--gray);
+    flex-shrink: 0;
+}
+
+.faq-toggle svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2;
 }
 
 .faq-item.active .faq-toggle {
@@ -517,11 +570,11 @@ img {
 }
 
 .footer-cta h2 {
-    font-family: 'Instrument Serif', serif;
+    font-family: var(--font-heading);
     font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 12px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .footer-cta p {
@@ -549,7 +602,7 @@ img {
     color: var(--gray);
 }
 
-/* ===== FOCUS VISIBLE (Global Erişilebilirlik) ===== */
+/* ===== FOCUS VISIBLE ===== */
 a:focus-visible,
 button:focus-visible {
     outline: 2px solid var(--cyan);
